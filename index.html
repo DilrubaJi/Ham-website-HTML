@@ -304,7 +304,6 @@ Plumbing"
                 <span>Book an appointment</span>
               </button>
             </div>
-            <div class="home-image12"></div>
           </div>
           <div id="features" class="home-features">
             <div class="home-content1">
@@ -535,53 +534,35 @@ Plumbing"
             <h2 class="home-text20">Book an appointment</h2>
           </div>
           <div class="home-form">
-            <div class="home-types">
-              <div class="book-type">
-                <span class="home-text21">In person appointment</span>
-              </div>
-              <div class="book-type">
-                <span class="home-text22">Phone consultation</span>
-              </div>
-            </div>
-            <div class="home-inputs">
+            <form class="home-inputs" id="contactForm">
               <input
+                id="name"
+                name="name"
                 type="text"
                 placeholder="Name"
                 autocomplete="name"
                 class="input book-input"
-              />
+              /> 
               <input
-                type="email"
-                placeholder="Email"
-                autocomplete="email"
-                class="input book-input"
-              />
-              <input
+                id="tel"
+                name="tel"
                 type="tel"
                 placeholder="Phone"
                 autocomplete="tel"
                 class="input book-input"
               />
-              <div class="home-date">
-                <input
-                  type="date"
-                  placeholder="Date"
-                  class="input book-input"
-                />
-                <img
-                  alt="image"
-                  src="public/Icons/calendar-2.svg"
-                  class="home-image13"
-                />
-              </div>
               <input
+                id="message"
+                name="message"
                 type="text"
-                placeholder="Practice"
+                placeholder="Message"
                 class="input book-input"
               />
               <div class="home-lower">
                 <div class="home-button">
-                  <button class="home-book4 button button-main">
+                  <button class="home-book4 button button-main"
+                    type="button" 
+                    onclick="sendMail()">
                     <span>Book</span>
                   </button>
                 </div>
@@ -838,5 +819,16 @@ Plumbing"
       defer=""
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
+
+    <!-- script for form email logic -->
+    <script>
+      function sendMail() {
+        var name = document.getElementById('name').value;
+        var message = document.getElementById('message').value;
+        var phone = document.getElementById('tel').value;
+        var mailtoLink = 'mailto:' + 'info@multitechhomes.co.uk' + '?subject=Contact from ' + name + '&body= Phone:' + phone + '   ' + message;
+        window.location.href = mailtoLink;
+      }
+      </script>
   </body>
 </html>

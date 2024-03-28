@@ -548,7 +548,7 @@
   width: 100%;
   display: flex;
   z-index: 100;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   align-items: stretch;
   padding-left: var(--dl-space-space-fiveunits);
   flex-direction: row;
