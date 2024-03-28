@@ -703,7 +703,7 @@
   gap: var(--dl-space-space-fiveunits);
   width: 100%;
   display: flex;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   align-items: center;
   padding-top: 120px;
   border-color: #B4B9C6;
